@@ -1,0 +1,74 @@
+{
+    "version": "2.0.0",
+    "windows": {
+        "options": {
+          "shell": {
+            "executable": "cmd.exe",
+            "args": [
+              "/C",
+              // The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
+              "\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat\"",
+              "&&"
+            ]
+          }
+        }
+      },
+    "tasks": [
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe MinGW",
+        "command": "C:\\MinGW\\bin\\g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-lbgi",
+          "-lgdi32",
+          "-lcomdlg32",
+          "-luuid",
+          "-loleaut32",
+          "-lole32",
+          "-luser32"
+        ],
+        "options": {
+          "cwd": "C:\\MinGW\\bin"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe TDM-GCC-64",
+        "command": "C:/TDM-GCC-64/bin/g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-lbgi",
+          "-lgdi32",
+          "-lcomdlg32",
+          "-luuid",
+          "-loleaut32",
+          "-lole32",
+          "-luser32"
+        ],
+        "options": {
+          "cwd": "C:/TDM-GCC-64/bin"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:/TDM-GCC-64/bin/g++.exe"
+      }
+    ]
+
+
+}

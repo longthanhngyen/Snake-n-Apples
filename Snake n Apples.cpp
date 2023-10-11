@@ -2,6 +2,8 @@
 #include <iostream>
 #include<conio.h>
 #include <vector>
+
+//Not include: libstdc++-6.dll |  libgcc_s_dw2-1.dll
 using namespace std;
 class Snake{
 private:

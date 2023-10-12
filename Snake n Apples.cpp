@@ -2,6 +2,8 @@
 #include <iostream>
 #include<conio.h>
 #include <vector>
+
+
 using namespace std;
 class Snake{
 private:
@@ -18,7 +20,7 @@ public:
       int getY(){return y;}
 
 };
-
+//Not include: libstdc++-6.dll |  libgcc_s_dw2-1.dll
 int GetRandom(int min,int max){
     return min + (int)(rand()*(max-min+1.0)/(1.0+RAND_MAX));
 }
